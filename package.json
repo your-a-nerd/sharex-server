@@ -1,0 +1,30 @@
+{
+  "name": "sharex-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/server.js",
+  "scripts": {
+    "dev": "ts-node src/server.ts",
+    "start": "ts-node dist/server.js",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greatplainsmodding/sharex-server.git"
+  },
+  "author": "Great Plains Modding",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greatplainsmodding/sharex-server/issues"
+  },
+  "homepage": "https://github.com/greatplainsmodding/sharex-server#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/node": "^14.14.6"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  }
+}
