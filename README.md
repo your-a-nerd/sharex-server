@@ -13,7 +13,7 @@ $ npm install
 
 # start
 $ npm run build
-$ npm run start
+$ npm start
 ```
 
 Note this is still in development so it will not work.
