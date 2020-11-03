@@ -1,7 +1,5 @@
 import express, { Request, Response } from 'express';
 import IControllerBase from '../../interfaces/IControllerBase.interface';
-
-import multer from 'multer';
 import path from 'path';
 import upload from '../../services/upload';
 

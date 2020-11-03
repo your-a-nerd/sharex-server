@@ -25,3 +25,8 @@ Note this is still in development so it will not work.
 - [ ] File Uploader
 - [ ] Discord Integration
 - [ ] Custom subdomains
+
+## Credits
+Logger - https://github.com/DetroitWhiskey136
+Express - https://github.com/expressjs/express
+Multer - https://github.com/expressjs/multer
