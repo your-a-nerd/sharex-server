@@ -1,21 +1,27 @@
 import multer from 'multer';
 import path from 'path';
-import crypto from 'crypto';
-import mime from 'mime-types';
+import * as config from '../config.json'
+
+const storage = multer.diskStorage({
+    destination: path.join(__dirname, "../../", "public", "images"),
+    filename: (req, file, cb) => {
+        if (config.supportedFiles.includes(path.extname(file.originalname).split(".")[1])) {
+            cb(null, guidGenerator() + path.extname(file.originalname));
+        } else {
+            cb("Error: Unsupported file type!");
+        };
+    },
+});
 
 const upload = multer({
-    storage: multer.diskStorage({
-        destination: path.join(__dirname, "../../", "public", "images"),
-        filename: (req, file, cb) => {
-            crypto.pseudoRandomBytes(4, (err, raw) => {
-                const mimeType = mime.lookup(file.originalname);
-                const nameSplit = file.originalname.split(".").slice(0, -1);
+    storage: storage,
+    limits: {
+		fileSize: 10000000
+	}
+})
 
-                const name = nameSplit.join(".").replace(/\s/g, "-");
-                cb(null, raw.toString("hex") + name + "." + mime.extension(mimeType));
-            });
-        },
-    }),
-});
+function guidGenerator() {
+    return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+}
 
 export default upload

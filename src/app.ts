@@ -8,11 +8,13 @@ class App {
         this.app = express();
         this.port = appInit.port;
         
-        this.middlewares(appInit.middleWares)
-        this.routes(appInit.controllers)
-
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({ extended: true }));
         this.app.use(express.static('public'));
         this.app.use(express.static('views'));
+
+        this.middlewares(appInit.middleWares)
+        this.routes(appInit.controllers)
     }
 
     private middlewares(middleWares: { forEach: (arg0: (middleWare: any) => void) => void; }) {
