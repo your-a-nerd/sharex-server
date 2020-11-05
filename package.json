@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "crypto": "^1.0.1",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "multer": "^1.4.2"
   }

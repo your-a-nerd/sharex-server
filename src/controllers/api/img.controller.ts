@@ -3,7 +3,7 @@ import IControllerBase from '../../interfaces/IControllerBase.interface';
 import path from 'path';
 import upload from '../../services/upload';
 
-class HomeController implements IControllerBase {
+class IMGController implements IControllerBase {
     public path = '/'
     public router = express.Router()
 
@@ -25,4 +25,4 @@ class HomeController implements IControllerBase {
     };
 };
 
-export default HomeController
+export default IMGController

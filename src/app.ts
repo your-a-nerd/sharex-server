@@ -10,8 +10,8 @@ class App {
         
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: true }));
+        this.app.set("view engine", "ejs");
         this.app.use(express.static('public'));
-        this.app.use(express.static('views'));
 
         this.middlewares(appInit.middleWares)
         this.routes(appInit.controllers)
