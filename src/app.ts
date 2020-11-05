@@ -1,4 +1,5 @@
 import express, { Application } from 'express';
+import Logger from './services/logger';
 
 class App {
     public app: Application;
@@ -31,7 +32,7 @@ class App {
 
     public listen() {
         this.app.listen(this.port, () => {
-            console.log(`App listening on the http://localhost:${this.port}`);
+            Logger(`App listening on the http://localhost:${this.port}`);
         });
     };
 };
