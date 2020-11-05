@@ -1,3 +1,4 @@
+# Ignore these files / folders when pushing to git
 node_modules
 dist
 public/images
