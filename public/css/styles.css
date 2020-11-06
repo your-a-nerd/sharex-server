@@ -81,3 +81,14 @@ body {
 .footer-copyright {
     padding-top: 25px;
 }
+
+.toast {
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+    min-width: 300px;
+}
+
+.alertLogo {
+    height: 25px;
+}
